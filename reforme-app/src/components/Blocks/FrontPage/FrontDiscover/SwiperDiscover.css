@@ -1,0 +1,31 @@
+.sw_explore {
+  overflow: visible;
+}
+.sw_explore .slider_item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+  max-width: 300px;
+  padding: 14px 0;
+  border-top: 1px solid #929191;
+  border-bottom: 1px solid #929191;
+}
+@media screen and (max-width: 767px) {
+  .sw_explore .slider_item {
+    max-width: 274px;
+  }
+}
+.sw_explore .slider_item h3 {
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+.sw_explore .slider_item .text {
+  color: #848685;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}

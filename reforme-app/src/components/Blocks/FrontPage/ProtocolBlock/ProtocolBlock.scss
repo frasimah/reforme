@@ -1,0 +1,29 @@
+@use '../../../../scss/media.scss';
+
+.protocol_block {
+   padding-top: 100px;
+   padding-top: media.fluid-media(100, 80);
+   padding-bottom: 100px;
+   padding-bottom: media.fluid-media(100, 80);
+
+   @include media.desktop {
+      padding-top: 80px;
+      padding-bottom: 80px;
+   }
+
+   @include media.tablet {
+      padding-top: 50px;
+      padding-bottom: 0;
+   }
+
+   &_wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 100px;
+
+      @include media.tablet {
+         row-gap: 50px;
+      }
+   }
+}

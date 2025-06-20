@@ -1,0 +1,98 @@
+@use '../../../../../../../scss/media.scss';
+
+.protocol_in_card_head {
+   position: relative;
+   border-radius: 10px;
+   width: 100%;
+
+   @include media.mobile {
+      padding-right: var(--mobileRightPadding);
+   }
+
+   &-num {
+      color: #FFF;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 30px;
+
+      @include media.desktop {
+         font-size: 18px;
+         line-height: 26px;
+      }
+
+      @include media.tablet {
+         font-size: 12px;
+         line-height: 18px;
+      }
+
+      @include media.mobile {
+         padding-right: var(--mobileRightPadding);
+      }
+   }
+
+   &_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1214px;
+      max-width: media.fl(1214, 894);
+      margin-left: auto;
+      margin-right: auto;
+      row-gap: 32px;
+      row-gap: media.fl(32, 20);
+
+      @include media.desktop {
+         row-gap: 20px;
+         max-width: 894px;
+      }
+
+      @include media.tablet {
+         max-width: 612px;
+         row-gap: 10px;
+      }
+
+      &-title {
+         color: #FFF;
+         text-align: center;
+         font-size: 50px;
+         font-size: media.fl(50, 30);
+         font-weight: 500;
+         line-height: 56px;
+         line-height: media.fl(56, 38);
+         letter-spacing: -1px;
+
+         @include media.desktop {
+            font-size: 30px;
+            line-height: 38px;
+         }
+
+         @include media.tablet {
+            font-size: 18px;
+            line-height: 24px;
+         }
+      }
+
+      &-text {
+         color: #FFF;
+         text-align: center;
+         font-size: 24px;
+         font-size: media.fl(24, 18);
+         font-weight: 500;
+         line-height: 30px;
+         line-height: media.fl(30, 26);
+
+         @include media.desktop {
+            font-size: 18px;
+            line-height: 26px;
+         }
+
+         @include media.tablet {
+            font-size: 12px;
+            line-height: 18px;
+         }
+      }
+   }
+
+
+}

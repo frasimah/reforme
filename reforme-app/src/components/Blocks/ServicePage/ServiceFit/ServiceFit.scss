@@ -1,0 +1,377 @@
+@use '../../../../scss/media';
+
+.service_fit {
+   margin-top: 120px;
+   margin-top: media.fluid-media(120, 100);
+
+   @include media.desktop {
+      margin-top: 100px;
+   }
+
+   @include media.tablet {
+      margin-top: 50px;
+   }
+
+   &_wrap {
+      margin-top: 80px;
+
+      @include media.tablet {
+         margin-top: 40px;
+      }
+
+      @include media.mobile {
+         margin-top: 20px;
+      }
+
+      &-icon_left {
+         width: 50%;
+         height: 100%;
+         border-radius: 20px 0px 0px 20px;
+         border-top: 1px solid #555554;
+         border-bottom: 1px solid #555554;
+         border-left: 1px solid #555554;
+
+         @include media.tablet {
+            display: none;
+         }
+      }
+
+      &-icon_right {
+         width: 50%;
+         height: 100%;
+         border-radius: 0px 20px 20px 0px;
+         border-top: 1px solid #555554;
+         border-bottom: 1px solid #555554;
+         border-right: 1px solid #555554;
+         margin-left: auto;
+
+         @include media.tablet {
+            display: none;
+         }
+      }
+
+      .col-xl-10 {
+         display: flex;
+         flex-direction: column;
+         row-gap: 40px;
+         align-items: center;
+
+         @include media.tablet {
+            row-gap: 24px;
+         }
+      }
+
+      &_list {
+         display: flex;
+         flex-wrap: wrap;
+         margin-right: calc(-0.5* var(--bs-gutter-x));
+         margin-left: calc(-0.5* var(--bs-gutter-x));
+         width: 100%;
+
+         @include media.tablet {
+            margin: 0;
+            width: 100%;
+         }
+
+         &_item {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 40px;
+            padding-right: calc(var(--bs-gutter-x)* 0.5);
+            padding-left: calc(var(--bs-gutter-x)* 0.5);
+            padding-top: 40px;
+            padding-top: media.fluid-media(40, 30);
+            padding-bottom: 40px;
+            padding-bottom: media.fluid-media(40, 30);
+            width: 50%;
+            position: relative;
+
+            @include media.desktop {
+               padding-top: 30px;
+               padding-bottom: 30px;
+            }
+
+            @include media.tablet {
+               width: 100%;
+               column-gap: 20px;
+               padding-top: 24px;
+               padding-bottom: 24px;
+               padding-left: 0px;
+               padding-right: 0px;
+
+               border-bottom: 1px solid #848685;
+
+               &:first-child {
+                  border-top: 1px solid #848685;
+               }
+            }
+
+            &::after {
+               content: '';
+               display: block;
+               width: calc(100% - var(--bs-gutter-x));
+               height: 1px;
+               background: #555554;
+               position: absolute;
+               bottom: 0;
+               left: calc(0px + (var(--bs-gutter-x) / 2));
+
+               @include media.tablet {
+                  display: none;
+               }
+            }
+
+
+
+            @include media.hover {
+               .service_fit_wrap_list_item-icon {
+                  svg {
+                     rect {
+                        fill: #56DAB0;
+                        fill-opacity: 1;
+                     }
+                  }
+               }
+            }
+
+            &_content {
+               display: flex;
+               flex-direction: column;
+               row-gap: 16px;
+               width: 100%;
+               max-width: calc(100% - 40px - 34px);
+
+               @include media.tablet {
+                  max-width: calc(100% - 20px - 34px);
+               }
+
+               &-title {
+                  color: #FFF;
+                  font-family: Gilroy;
+                  font-size: 30px;
+                  font-size: media.fluid-media(30, 18);
+                  font-weight: 500;
+                  line-height: 36px;
+                  line-height: media.fluid-media(36, 24);
+
+                  @include media.desktop {
+                     font-size: 18px;
+                     line-height: 24px;
+                  }
+
+                  @include media.tablet {
+                     font-size: 20px;
+                     line-height: 24px;
+                  }
+               }
+
+               &-text {
+                  display: flex;
+                  flex-direction: column;
+                  row-gap: 16px;
+                  color: #848685;
+                  font-family: Gilroy;
+                  font-size: 18px;
+                  font-size: media.fluid-media(18, 14);
+                  font-weight: 500;
+                  line-height: 24px;
+                  line-height: media.fluid-media(24, 20);
+
+                  @include media.desktop {
+                     font-size: 14px;
+                     line-height: 20px;
+                  }
+               }
+            }
+
+            &-icon {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 34px;
+               height: 34px;
+               overflow: hidden;
+               border-radius: 50%;
+               margin: auto 0;
+
+               svg,
+               img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  transition: .4s;
+
+                  rect {
+                     transition: .4s;
+                  }
+               }
+            }
+         }
+
+         &_also {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: calc(-0.5* var(--bs-gutter-x));
+            margin-left: calc(-0.5* var(--bs-gutter-x));
+            width: 100%;
+
+            @include media.tablet {
+               justify-content: space-between;
+               margin-bottom: -16px;
+            }
+
+            @include media.mobile {
+               row-gap: 16px;
+               margin-bottom: 0px;
+            }
+
+            &-title {
+               padding-right: calc(var(--bs-gutter-x)* 0.5);
+               padding-left: calc(var(--bs-gutter-x)* 0.5);
+               width: 100%;
+
+               color: #848685;
+               font-family: Gilroy;
+               font-size: 24px;
+               font-size: media.fluid-media(24, 18);
+               font-weight: 500;
+               line-height: 30px;
+               line-height: media.fluid-media(30, 24);
+
+               @include media.desktop {
+                  font-size: 18px;
+                  line-height: 24px;
+               }
+
+               @include media.tablet {
+                  padding-left: 0px;
+                  padding-right: 0px;
+                  font-size: 14px;
+                  line-height: 20px;
+               }
+
+               @include media.mobile {
+                  margin-bottom: 8px;
+               }
+            }
+
+            &_item {
+               display: inline-block;
+               padding-right: calc(var(--bs-gutter-x)* 0.5);
+               padding-left: calc(var(--bs-gutter-x)* 0.5);
+               padding-top: 40px;
+               padding-top: clamp(1.875rem, -1.25rem + 3.125vw, 2.5rem);
+               padding-bottom: 40px;
+               padding-bottom: clamp(1.875rem, -1.25rem + 3.125vw, 2.5rem);
+               width: 50%;
+               position: relative;
+
+               @include media.desktop {
+                  padding-top: 30px;
+                  padding-bottom: 30px;
+               }
+
+               @include media.tablet {
+                  width: calc(50% - 25px);
+                  padding-top: 16px;
+                  padding-bottom: 16px;
+                  padding-left: 0px;
+                  padding-right: 0px;
+               }
+
+               @include media.mobile {
+                  padding: 0px;
+                  width: 100%;
+               }
+
+               &:not(:nth-of-type(-n + 3)) {
+                  &::after {
+                     content: '';
+                     display: block;
+                     width: calc(100% - var(--bs-gutter-x));
+                     height: 1px;
+                     background: #555554;
+                     position: absolute;
+                     top: 0;
+                     left: 50%;
+                     transform: translateX(-50%);
+
+                     @include media.tablet {
+                        display: none;
+                     }
+                  }
+
+                  @include media.tablet {
+                     border-top: 1px solid #555554;
+                  }
+
+                  @include media.mobile {
+                     border-top: unset;
+                  }
+               }
+
+               &-title {
+                  color: #FFF;
+                  font-family: Gilroy;
+                  font-size: 24px;
+                  font-size: media.fluid-media(24, 18);
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 30px;
+                  line-height: media.fluid-media(30, 24);
+
+                  text-decoration: underline;
+                  text-decoration-color: currentColor;
+                  text-underline-offset: 4px;
+                  text-decoration-thickness: 1px;
+
+                  transition: .4s;
+
+                  @include media.desktop {
+                     font-size: 18px;
+                     line-height: 24px;
+                  }
+
+                  @include media.tablet {
+                     font-size: 14px;
+                     line-height: 20px;
+                  }
+
+
+
+                  @include media.hover {
+                     text-decoration-color: transparent;
+                  }
+               }
+
+               p {
+                  display: inline;
+                  color: #848685;
+                  font-family: Gilroy;
+                  font-size: 24px;
+                  font-size: media.fluid-media(24, 18);
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 30px;
+                  line-height: media.fluid-media(30, 24);
+
+                  @include media.desktop {
+                     font-size: 18px;
+                     line-height: 24px;
+                  }
+
+                  @include media.tablet {
+                     font-size: 14px;
+                     line-height: 20px;
+                  }
+               }
+            }
+
+         }
+      }
+
+      .btn {
+         display: none;
+      }
+   }
+}

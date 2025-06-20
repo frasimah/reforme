@@ -1,0 +1,364 @@
+@import '../../../../scss/media';
+
+.service_page_procedur {
+
+   // margin-top: 100px;
+   margin-top: clamp(5rem, -1.25rem + 6.25vw, 6.25rem);
+
+   @include desktop {
+      // margin-top: 80px;
+      margin-top: clamp(3.125rem, -6.25rem + 12.5vw, 5rem);
+   }
+
+   @include tablet {
+      margin-top: 50px;
+   }
+
+   .procedur_wrap {
+      &__head {
+         .meta {
+            display: flex;
+            flex-direction: column;
+            // row-gap: 32px;
+            row-gap: clamp(1.5rem, -1rem + 2.5vw, 2rem);
+
+            @include desktop {
+               row-gap: 24px;
+            }
+
+
+            &__text {
+               color: #848685;
+               font-size: clamp(1.125rem, -0.75rem + 1.875vw, 1.5rem);
+               // 24px / 18px
+               font-style: normal;
+               font-weight: 400;
+               line-height: clamp(1.5rem, -0.375rem + 1.875vw, 1.875rem);
+               // 30px / 24px
+
+               max-width: 580px;
+
+               @include desktop {
+                  font-size: clamp(0.875rem, -0.375rem + 1.667vw, 1.125rem);
+                  // 18px / 14px
+                  line-height: clamp(1.25rem, 0rem + 1.667vw, 1.5rem);
+                  // 24px / 20px
+
+                  max-width: 430px;
+               }
+
+               @include tablet {
+                  font-size: 14px;
+                  line-height: 20px;
+                  max-width: 100%;
+               }
+            }
+         }
+      }
+
+      &__body {
+         margin-top: 120px;
+         margin-top: clamp(6.25rem, 0rem + 6.25vw, 7.5rem);
+
+         @include desktop {
+            margin-top: 100px;
+            margin-top: clamp(3.125rem, -12.5rem + 20.833vw, 6.25rem);
+         }
+
+         @include tablet {
+            margin-top: 50px;
+         }
+
+         .content {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -20px;
+
+            .left {
+               width: 100%;
+               max-width: 16.6666666666667%;
+               padding: 0 20px;
+
+               @include tablet {
+                  display: none;
+               }
+
+               .icon {
+                  display: flex;
+                  width: 100%;
+                  max-width: 50px;
+                  max-width: clamp(2.5rem, -0.625rem + 3.125vw, 3.125rem);
+                  height: auto;
+                  aspect-ratio: 1/1;
+
+                  @include desktop {
+                     max-width: 40px;
+                     max-width: clamp(1.875rem, -1.25rem + 4.167vw, 2.5rem);
+                  }
+
+
+                  svg {
+                     width: 100%;
+                     height: 100%;
+                  }
+               }
+            }
+
+            .right {
+               flex: 1 1 auto;
+               width: 100%;
+               max-width: 83.33333333333333%;
+               padding: 0 20px;
+
+               @include tablet {
+                  max-width: 100%;
+               }
+
+               &__title {
+                  color: #FFF;
+                  font-size: 60px;
+                  font-size: clamp(3.125rem, 0rem + 3.125vw, 3.75rem);
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 60px;
+                  line-height: clamp(3.125rem, 0rem + 3.125vw, 3.75rem);
+                  letter-spacing: -1.2px;
+
+                  @include desktop {
+                     font-size: 50px;
+                     font-size: clamp(1.75rem, -5.125rem + 9.167vw, 3.125rem);
+                     line-height: 46px;
+                     line-height: clamp(1.75rem, -3.875rem + 7.5vw, 2.875rem);
+                     letter-spacing: -1px;
+                  }
+
+                  @include tablet {
+                     font-size: 28px;
+                     line-height: 28px;
+                     letter-spacing: unset;
+                  }
+               }
+
+               &__text {
+                  margin-top: 32px;
+                  margin-top: clamp(1.5rem, -1rem + 2.5vw, 2rem);
+
+                  color: #848685;
+                  font-size: 24px;
+                  font-size: clamp(1.125rem, -0.75rem + 1.875vw, 1.5rem);
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 30px;
+                  line-height: clamp(1.5rem, -0.375rem + 1.875vw, 1.875rem);
+
+                  max-width: 580px;
+                  max-width: clamp(26.875rem, -20rem + 46.875vw, 36.25rem);
+
+                  @include desktop {
+                     font-size: 18px;
+                     font-size: clamp(0.875rem, -0.375rem + 1.667vw, 1.125rem);
+                     line-height: 24px;
+                     line-height: clamp(1.25rem, 0rem + 1.667vw, 1.5rem);
+
+                     margin-top: 24px;
+                     margin-top: clamp(0.75rem, -3rem + 5vw, 1.5rem);
+
+                     max-width: 430px;
+                  }
+
+                  @include tablet {
+                     font-size: 14px;
+                     line-height: 20px;
+
+                     margin-top: 12px;
+                     max-width: 100%;
+                  }
+
+                  @include mobile {
+                     margin-top: 24px;
+                  }
+               }
+
+               &__list {
+                  display: flex;
+                  flex-direction: column;
+                  row-gap: 40px;
+                  row-gap: clamp(1.875rem, -1.25rem + 3.125vw, 2.5rem);
+                  margin-top: 60px;
+                  margin-top: clamp(2.5rem, -3.75rem + 6.25vw, 3.75rem);
+
+                  max-width: 600px;
+                  max-width: clamp(23.75rem, -45rem + 68.75vw, 37.5rem);
+
+                  overflow: hidden;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 9;
+                  -webkit-box-orient: vertical;
+
+                  @include desktop {
+                     margin-top: 40px;
+                     margin-top: clamp(0.75rem, -8rem + 11.667vw, 2.5rem);
+                     row-gap: 30px;
+                     row-gap: clamp(0.75rem, -4.875rem + 7.5vw, 1.875rem);
+
+                     max-width: 450px;
+                  }
+
+                  @include tablet {
+                     margin-top: 12px;
+                     row-gap: 12px;
+                  }
+
+                  li {
+                     color: #FFF;
+                     font-size: 24px;
+                     font-size: clamp(1.125rem, -0.75rem + 1.875vw, 1.5rem);
+                     font-style: normal;
+                     font-weight: 400;
+                     line-height: 30px;
+                     line-height: clamp(1.5rem, -0.375rem + 1.875vw, 1.875rem);
+                     padding-left: 55px;
+                     position: relative;
+                     margin-bottom: 40px;
+                     margin-bottom: clamp(1.875rem, -1.25rem + 3.125vw, 2.5rem);
+
+                     &:last-of-type {
+                        margin-bottom: 0px;
+                     }
+
+
+                     @include desktop {
+                        font-size: 18px;
+                        font-size: clamp(0.875rem, -0.375rem + 1.667vw, 1.125rem);
+                        line-height: 24px;
+                        line-height: clamp(1.25rem, 0rem + 1.667vw, 1.5rem);
+
+                        padding-left: 40px;
+                        padding-left: clamp(1.563rem, -3.125rem + 6.25vw, 2.5rem);
+
+                        margin-bottom: 30px;
+                        margin-bottom: clamp(0.75rem, -4.875rem + 7.5vw, 1.875rem);
+                     }
+
+                     @include tablet {
+                        font-size: 14px;
+                        line-height: 20px;
+
+                        padding-left: 23px;
+                        margin-bottom: 12px;
+                     }
+
+                     &::before {
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        max-width: clamp(0.75rem, -0.5rem + 1.25vw, 1rem);
+                        height: auto;
+                        aspect-ratio: 1/1;
+                        background: #fff;
+                        border-radius: 50%;
+                        position: absolute;
+                        left: 0px;
+                        top: 5px;
+
+                        @include desktop {
+                           left: 0px;
+                           max-width: 12px;
+                           max-width: clamp(0.5rem, -0.75rem + 1.667vw, 0.75rem);
+                        }
+
+                        @include tablet {
+                           max-width: 8px;
+                        }
+                     }
+                  }
+
+                  ul {
+                     padding: 0;
+
+                     li {
+                        padding: 0;
+                        margin: 0;
+
+                        &::before {
+                           display: none;
+                        }
+                     }
+                  }
+               }
+
+               .btn_more {
+                  margin-top: 24px;
+
+                  color: #848685;
+                  font-family: Gilroy;
+                  font-size: 18px;
+                  font-weight: 400;
+                  line-height: 24px;
+                  position: relative;
+
+                  cursor: pointer;
+
+                  @include tablet {
+                     margin-top: 16px;
+
+                     font-size: 14px;
+                     line-height: 20px;
+                  }
+
+                  &::after {
+                     content: '';
+                     display: block;
+                     width: 100%;
+                     height: 1px;
+                     background: #848685;
+                     position: absolute;
+                     left: 0;
+                     bottom: 0;
+                     transform: scaleX(1);
+                     transform-origin: 0% 0%;
+
+                     transition: transform .4s;
+                  }
+
+                  @include hover {
+                     &::after {
+                        transform: scaleX(0);
+                        transform-origin: 100% 0%;
+                     }
+                  }
+               }
+            }
+         }
+
+         .col_img {
+            @include tablet {
+               display: flex;
+               align-items: flex-end;
+            }
+         }
+
+         .image {
+            border-radius: 4px;
+            overflow: hidden;
+            width: 100%;
+            aspect-ratio: 450/311;
+
+            @include tablet {
+               aspect-ratio: 362/243;
+            }
+
+            @include mobile {
+               aspect-ratio: 13/9;
+               margin-top: 12px;
+            }
+
+            img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+            }
+         }
+      }
+   }
+}

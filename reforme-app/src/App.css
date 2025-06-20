@@ -1,0 +1,452 @@
+@charset "UTF-8";
+/* ОБНУЛЕНИЕ */
+/**
+  Нормализация блочной модели
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+     Упрощаем работу с изображениями
+    */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/**
+     Наследуем свойства шрифт для полей ввода
+    */
+input,
+textarea,
+select,
+button {
+  background: none;
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0px;
+  font: inherit;
+}
+
+html {
+  /**
+      Пригодится в большинстве ситуаций
+      (когда, например, нужно будет "прижать" футер к низу сайта)
+     */
+  height: 100%;
+  /**
+      Плавный скролл
+     */
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+      Пригодится в большинстве ситуаций
+      (когда, например, нужно будет "прижать" футер к низу сайта)
+     */
+  min-height: 100%;
+  /**
+      Унифицированный интерлиньяж
+     */
+  line-height: 1.5;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+svg,
+svg path,
+svg rect,
+svg circle,
+svg line {
+  transition: 0.3s;
+}
+
+.icon {
+  display: flex;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-BoldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Extrabold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-BlackItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-MediumItalic.woff2") format("woff2");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-ExtraboldItalic.woff2") format("woff2");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-RegularItalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-ThinItalic.woff2") format("woff2");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-SemiboldItalic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Heavy.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-HeavyItalic.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-UltraLight.woff2") format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../fonts/Gilroy-UltraLightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+html,
+body {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #fff;
+  font-family: "Gilroy", sans-serif;
+  background-color: #252323;
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #929191;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #56DAB0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  margin-top: 70px;
+  flex: 1 1 auto;
+}
+@media screen and (max-width: 1599px) {
+  main {
+    margin-top: 54px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  main {
+    margin-top: 50px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media screen and (max-width: 1199px) {
+  .container {
+    padding: 0 17px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0 12px;
+  }
+}
+
+h2 {
+  color: #FFF;
+  font-size: clamp(3.125rem, 0rem + 3.125vw, 3.75rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(3.125rem, 0rem + 3.125vw, 3.75rem);
+  letter-spacing: -1.2px;
+}
+h2.black {
+  color: #848685;
+}
+@media screen and (max-width: 1599px) {
+  h2 {
+    font-size: clamp(2.25rem, -2.125rem + 5.833vw, 3.125rem);
+    line-height: clamp(2.25rem, -2.125rem + 5.833vw, 3.125rem);
+    letter-spacing: -1px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  h2 {
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: unset;
+  }
+}
+
+.row {
+  --bs-gutter-x: 40px;
+}
+@media screen and (max-width: 1199px) {
+  .row {
+    --bs-gutter-x: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .row {
+    --bs-gutter-x: 15px;
+  }
+}

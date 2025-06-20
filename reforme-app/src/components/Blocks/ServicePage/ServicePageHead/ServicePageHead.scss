@@ -1,0 +1,129 @@
+@import '../../../../scss/media';
+
+.service_single {
+   border-bottom: 1px solid #929191;
+
+   @include mobile {
+      border-bottom: none;
+   }
+
+   &.bio_page_head {}
+
+   .front_head__left {
+
+      .top {
+         padding-top: 90px;
+         padding-bottom: 90px;
+
+         @include tablet {
+            padding-top: 54px;
+            padding-bottom: 54px;
+         }
+
+         @include mobile {
+            padding-top: 70px;
+            padding-bottom: 50px;
+         }
+
+         h1 {
+            max-width: 670px;
+            padding: 0 20px;
+
+            @include desktop {
+               max-width: 446px;
+
+               font-size: 50px;
+               font-weight: 500;
+               line-height: 46px;
+               letter-spacing: -1px;
+            }
+
+            @include tablet {
+               font-size: 48px;
+               font-weight: 500;
+               line-height: 48px;
+               letter-spacing: -0.96px;
+            }
+         }
+
+         .text {
+
+            max-width: 590px;
+
+            @include desktop {
+               max-width: 430px;
+            }
+
+            @include tablet {
+               max-width: 100%;
+               max-width: 500px;
+               padding: 0 30px;
+            }
+         }
+      }
+
+      .list {
+         display: flex;
+
+         .item {
+            border-right: none;
+            padding: 20px 40px;
+
+            @include tablet {
+               padding: 14px 20px;
+               text-align: center;
+               justify-content: center;
+               align-items: center;
+            }
+
+            span {
+               @include tablet {
+                  font-size: 18px;
+                  line-height: 24px;
+               }
+
+               @include mobile {}
+            }
+
+            &.inline {
+               flex: 1 1 33.333333%;
+               border-right: 1px solid #929191;
+               justify-content: center;
+               cursor: default;
+
+               @include tablet {
+                  flex: 1 1 50%;
+               }
+
+               span {
+                  @include tablet {
+                     font-size: 16px;
+                     line-height: 20px;
+                  }
+               }
+
+               &:nth-of-type(even) {
+
+                  @include tablet {
+                     border-right: unset;
+                  }
+               }
+
+               &:last-child {
+                  border-right: unset;
+               }
+            }
+         }
+
+
+      }
+   }
+
+   .col-md-6.image {
+      border-left: 1px solid #929191;
+
+      @include mobile {
+         border-left: none;
+      }
+   }
+}

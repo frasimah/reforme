@@ -1,0 +1,427 @@
+@import '../../scss/media.scss';
+
+.footer {
+   padding: 60px 0;
+   background: #252323;
+
+   @include desktop {
+      padding: 50px 0 40px 0;
+   }
+
+   @include tablet {
+      padding: 30px 0 44px 0;
+   }
+
+   @include mobile {
+      padding: 30px 0 32px 0;
+   }
+
+   &__wrap {
+      row-gap: 50px;
+
+      @include desktop {
+         row-gap: 40px;
+      }
+
+      @include tablet {
+         row-gap: 50px;
+      }
+
+      @include mobile {
+         row-gap: 30px;
+      }
+
+      .footer_nav {
+
+         @include mobile {
+            margin-top: 6px;
+         }
+
+         ul {
+
+            @include tablet {
+               column-gap: 16px;
+               align-items: flex-start;
+            }
+
+            @include mobile {
+               flex-wrap: wrap;
+               column-gap: 10px;
+               row-gap: 10px;
+               width: 100%;
+               max-width: calc(100% - 8px);
+            }
+
+            li {
+
+               @include mobile {
+                  width: 100%;
+                  max-width: calc(50% - 10px);
+               }
+
+               a {
+
+                  @include mobile {
+                     font-size: 14px;
+                     line-height: 20px;
+                  }
+               }
+            }
+         }
+      }
+
+      .footer_contancts {
+         margin-top: 80px;
+         display: flex;
+         column-gap: 137px;
+
+         @include desktop {
+            margin-top: 60px;
+         }
+
+         @include tablet {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+         }
+
+         @include mobile {
+            margin-top: 30px;
+         }
+
+         .item {
+            display: flex;
+            flex-direction: column;
+            color: #848685;
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+
+            &:last-of-type {
+               row-gap: 6px;
+
+               @include desktop {
+                  row-gap: 0px;
+               }
+            }
+
+            @include desktop {
+               font-size: 14px;
+               line-height: 20px;
+            }
+
+            a {
+               color: inherit;
+
+               font-size: inherit;
+               font-style: inherit;
+               font-weight: inherit;
+               line-height: inherit;
+               transition: .4s;
+
+               @include hover {
+                  color: #fff;
+               }
+            }
+         }
+      }
+
+      .footer_today {
+         display: flex;
+         flex-direction: column;
+         row-gap: 40px;
+
+         @include desktop {
+            row-gap: 30px;
+         }
+
+         @include tablet {
+            row-gap: 20px;
+            align-items: flex-end;
+            max-width: 300px;
+            margin-left: auto;
+         }
+
+         @include mobile {
+            margin-left: unset;
+            align-items: flex-start;
+            max-width: 100%;
+         }
+
+         .title {
+            display: flex;
+            align-items: flex-end;
+            column-gap: 16px;
+
+            color: #FFF;
+            font-size: clamp(1.5rem, -1.625rem + 3.125vw, 2.125rem);
+            font-style: normal;
+            font-weight: 500;
+            line-height: clamp(1.5rem, -1.625rem + 3.125vw, 2.125rem);
+
+            @include desktop {
+               column-gap: clamp(0.75rem, -0.5rem + 1.667vw, 1rem);
+               font-size: clamp(1.25rem, 0rem + 1.667vw, 1.5rem);
+               line-height: clamp(1.25rem, 0rem + 1.667vw, 1.5rem);
+            }
+
+            @include tablet {
+               column-gap: 0px;
+               font-size: 28px;
+               line-height: 28px;
+            }
+
+            .icon {
+               display: flex;
+               width: clamp(1.75rem, -0.75rem + 2.5vw, 2.25rem);
+               height: clamp(1.75rem, -0.75rem + 2.5vw, 2.25rem);
+               min-width: clamp(1.75rem, -0.75rem + 2.5vw, 2.25rem);
+               min-height: clamp(1.75rem, -0.75rem + 2.5vw, 2.25rem);
+               max-width: clamp(1.75rem, -0.75rem + 2.5vw, 2.25rem);
+               max-height: clamp(1.75rem, -0.75rem + 2.5vw, 2.25rem);
+
+               @include desktop {
+                  width: clamp(1.375rem, -0.5rem + 2.5vw, 1.75rem);
+                  height: clamp(1.375rem, -0.5rem + 2.5vw, 1.75rem);
+                  min-width: clamp(1.375rem, -0.5rem + 2.5vw, 1.75rem);
+                  min-height: clamp(1.375rem, -0.5rem + 2.5vw, 1.75rem);
+                  max-width: clamp(1.375rem, -0.5rem + 2.5vw, 1.75rem);
+                  max-height: clamp(1.375rem, -0.5rem + 2.5vw, 1.75rem);
+               }
+
+               @include tablet {
+                  display: none;
+               }
+
+               svg {
+                  width: 100%;
+                  height: 100%;
+               }
+            }
+         }
+
+         .btns_footer {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            width: 100%;
+
+            @include desktop {
+               row-gap: 16px;
+            }
+
+            @include tablet {
+               row-gap: 10px;
+            }
+
+            .btn_big {
+               width: 100%;
+            }
+         }
+
+         .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 13px;
+            border-radius: 50px;
+            background-color: #FFF;
+            background-blend-mode: plus-darker;
+            position: relative;
+            overflow: hidden;
+
+            color: #252323;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 30px;
+            transition-property: color, background-color;
+            transition-duration: .45s, 0s;
+            transition-delay: 0s, 0s;
+
+            @include desktop {
+               padding: 9px 13px;
+
+               font-size: 18px;
+               line-height: 24px;
+            }
+
+            @include tablet {
+               font-size: 14px;
+               line-height: 20px;
+            }
+
+            span {
+               position: relative;
+               z-index: 2;
+            }
+
+            .btn_bg {
+               position: absolute;
+               width: 100%;
+               height: 0%;
+               background: #56DAB0;
+               position: absolute;
+               bottom: 0px;
+               left: 0;
+               transition: .45s;
+               z-index: 1;
+               border-radius: 50% 50% 0 0;
+            }
+
+            @include hover {
+               color: #fff;
+               background: #56DAB0;
+               transition-duration: .2s, 0s;
+               transition-delay: 0s, .2s;
+
+               .btn_bg {
+                  height: 150%;
+                  border-radius: 25% 25% 0px 0px;
+               }
+            }
+         }
+      }
+
+      .logo {
+         max-width: 100%;
+
+         svg {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+         }
+
+         @include tablet {
+            width: 100%;
+            max-width: calc(100% - 24px);
+         }
+
+         @include mobile {
+            max-width: calc(100% - 16px);
+            margin-top: 34px;
+         }
+      }
+
+      .develop {
+         display: flex;
+         align-items: flex-end;
+         column-gap: clamp(5.25rem, -4.438rem + 9.688vw, 7.188rem);
+         height: 100%;
+         flex-wrap: wrap;
+         row-gap: 10px;
+
+         @include desktop {
+            column-gap: 10px;
+            justify-content: space-between;
+         }
+
+         @include tablet {
+            width: 100%;
+            max-width: 300px;
+            margin-left: auto;
+            column-gap: 32px;
+            justify-content: flex-start;
+         }
+
+         @include mobile {
+            justify-content: flex-start;
+            margin-left: unset;
+            column-gap: 80px;
+            max-width: 100%;
+            justify-content: space-between;
+            padding-right: 23px;
+         }
+
+         .item {
+            color: rgba(132, 134, 133, 0.50);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+
+            a {
+               color: inherit;
+               font-size: inherit;
+               font-style: inherit;
+               font-weight: inherit;
+               line-height: inherit;
+
+               transition: .4s;
+
+               &:hover {
+                  color: #fff;
+               }
+            }
+
+            @include desktop {
+               font-size: 12px;
+               line-height: 14px;
+            }
+
+            @include tablet {
+               line-height: 20px;
+            }
+         }
+      }
+
+      .item_social_list {
+         margin-top: 14px;
+         display: flex;
+         flex-wrap: wrap;
+         column-gap: 14px;
+         row-gap: 10px;
+
+         @include desktop {
+            margin-top: 16px;
+         }
+
+         @include tablet {
+            margin-top: 20px;
+            width: 100%;
+         }
+
+         @include mobile {
+            margin-top: 40px;
+         }
+
+         .item_social_list_item {
+            display: flex;
+            width: 100%;
+            max-width: 40px;
+            height: auto;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+
+            @include desktop {
+               max-width: 30px;
+            }
+
+            @include hover {
+               svg {
+                  fill: #fff;
+
+                  path {
+                     fill: #fff;
+                  }
+               }
+            }
+
+            svg {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+
+               path {
+                  transition: .4s;
+               }
+            }
+         }
+      }
+   }
+
+}

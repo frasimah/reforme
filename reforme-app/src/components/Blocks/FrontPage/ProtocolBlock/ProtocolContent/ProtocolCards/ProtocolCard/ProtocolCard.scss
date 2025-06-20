@@ -1,0 +1,170 @@
+@use '../../../../../../../scss/media.scss';
+
+.protocol_card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   row-gap: 100px;
+   row-gap: media.fl(100, 60);
+   height: 100%;
+   justify-content: space-between;
+   padding: 30px 40px;
+   padding: 30px media.fluid-media(40, 30);
+   border-radius: 10px;
+   overflow: hidden;
+   position: relative;
+   transition: .4s ease;
+
+   @include media.desktop {
+      padding: 30px;
+      row-gap: 60px;
+   }
+
+   @include media.tablet {
+      padding: 16px 20px;
+      row-gap: 30px;
+      border-radius: 5px;
+      justify-content: flex-start;
+      aspect-ratio: unset;
+      height: 100%;
+   }
+
+   @include media.mobile {
+      padding: 12px;
+      row-gap: 30px;
+   }
+
+   @include media.hover {
+      transform: scale(1.015);
+   }
+
+   &-num {
+      color: #FFF;
+      text-align: center;
+      font-size: 24px;
+      font-size: media.fluid-media(24, 18);
+      font-weight: 500;
+      line-height: 30px;
+      line-height: media.fluid-media(30, 26);
+
+      @include media.desktop {
+         font-size: 18px;
+         line-height: 26px;
+      }
+
+      @include media.tablet {
+         font-size: 12px;
+         line-height: 18px;
+      }
+   }
+
+   &_content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+      row-gap: media.fluid-media(30, 20);
+
+      @include media.desktop {
+         row-gap: 30px;
+      }
+
+      @include media.tablet {
+         row-gap: 6px;
+         flex: 1 1 auto;
+         justify-content: center;
+      }
+
+      &-title {
+         color: #FFF;
+         text-align: center;
+         font-size: 18px;
+         font-size: media.fluid-media(18, 14);
+         font-weight: 500;
+         line-height: 26px;
+         line-height: media.fluid-media(26, 20);
+         text-transform: uppercase;
+
+         @include media.desktop {
+            font-size: 14px;
+            line-height: 20px;
+         }
+
+         @include media.tablet {
+            font-size: 12px;
+            line-height: 18px;
+         }
+      }
+
+      &-subtitle {
+         color: #FFF;
+         text-align: center;
+         font-size: 40px;
+         font-size: media.fluid-media(40, 30);
+         font-weight: 500;
+         line-height: 46px;
+         line-height: media.fluid-media(46, 38);
+
+         @include media.desktop {
+            font-size: 30px;
+            line-height: 38px;
+         }
+
+         @include media.tablet {
+            font-size: 18px;
+            line-height: 24px;
+         }
+      }
+   }
+
+   &-icon {
+      display: flex;
+      width: 40px;
+      width: media.fluid-media(40, 30);
+      height: 40px;
+      height: media.fluid-media(40, 30);
+
+      @include media.desktop {
+         width: 30px;
+         height: 30px;
+      }
+
+      @include media.tablet {
+         width: 24px;
+         height: 24px;
+      }
+
+      svg {
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   &-bg {
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      user-select: none;
+      pointer-events: none;
+      z-index: -1;
+      filter: blur(100px);
+
+      img {
+         width: 100%;
+         height: 100%;
+      }
+   }
+
+   &-btn {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      cursor: pointer;
+   }
+}

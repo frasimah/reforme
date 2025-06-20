@@ -1,0 +1,4 @@
+.service_page_list {
+  display: flex;
+  flex-wrap: wrap;
+}

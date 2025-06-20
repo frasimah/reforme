@@ -1,0 +1,32 @@
+@import '../../scss/media.scss';
+
+nav {
+   ul {
+      display: flex;
+      align-items: center;
+      column-gap: 40px;
+
+      li {
+         display: flex;
+
+         a {
+            color: #FFF;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+
+            transition: .4s;
+
+            @include hover {
+               color: #848685;
+            }
+
+            @include desktop {
+               font-size: 14px;
+               line-height: 14px;
+            }
+         }
+      }
+   }
+}
