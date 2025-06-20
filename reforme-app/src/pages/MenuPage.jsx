@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import '../components/MenuPage/MenuPage.scss';
 import BreadCrumbsAbs from '../components/Utilities/BreadCrumbsAbs/BreadCrumbsAbs';
 import BtnBg from '../components/Utilities/BtnBg/BtnBg';
@@ -37,27 +37,33 @@ function MenuPage() {
 
    const { aLaCarteFacialMenu, individualServices, signaturePackages, membershipTiers } = prices;
 
-   const listMenu = [
-      ...aLaCarteFacialMenu.map(item => ({
-         title: item.name,
-         textList: [{ text: `<p>${item.duration}</p><p>Cost: ${item.price}</p>` }],
-         link: `https://book.squareup.com/appointments/ajrcmyfzqm6qio/location/LVMDQHE5HPTQR/services`
-      })),
-      ...Object.values(individualServices).map(service => ({
+   // A La Carte Facial Menu section
+   const aLaCarteItems = aLaCarteFacialMenu.items.map(item => ({
+      title: item.name,
+      textList: [{ text: `<p>Cost: ${item.price}</p>` }],
+      link: `https://book.squareup.com/appointments/ajrcmyfzqm6qio/location/LVMDQHE5HPTQR/services`
+   }));
+
+   // Individual Services section
+   const individualServicesList = Object.values(individualServices)
+      .filter(service => service.name) // Filter out h2Title
+      .map(service => ({
          title: service.name,
          textList: service.options.map(opt => ({ text: `<p>${opt.name}</p> <p>Cost: ${opt.price} ${opt.details ? `(${opt.details})` : ''}</p>`})),
          link: `https://book.squareup.com/appointments/ajrcmyfzqm6qio/location/LVMDQHE5HPTQR/services`
-      })),
-      ...signaturePackages.map(item => ({
-         title: item.name,
-         textList: item.services.map(s => ({ text: `<p>${s}</p>`})).concat([{text: `<p>Cost: ${item.price}</p>`}]),
-         link: `https://book.squareup.com/appointments/ajrcmyfzqm6qio/location/LVMDQHE5HPTQR/services`
-      }))
-   ];
+      }));
 
-   const memberships = membershipTiers.map(tier => ({
+   // Signature Packages section
+   const signaturePackagesList = signaturePackages.items.map(item => ({
+      title: item.name,
+      textList: item.services.map(s => ({ text: `<p>${s}</p>`})).concat([{text: `<p>Cost: ${item.price}</p>`}]),
+      link: `https://book.squareup.com/appointments/ajrcmyfzqm6qio/location/LVMDQHE5HPTQR/services`
+   }));
+
+   // Membership Tiers section
+   const memberships = membershipTiers.items.map(tier => ({
       title: tier.name,
-      textList: tier.features.map(f => ({ text: `<p>${f}</p>`})).concat([{text: `<p>${tier.price}</p>`}]),
+      textList: tier.benefits.map(f => ({ text: `<p>${f}</p>`})).concat([{text: `<p>${tier.price}</p>`}]),
       link: `https://book.squareup.com/appointments/ajrcmyfzqm6qio/location/LVMDQHE5HPTQR/services`
    }));
 
@@ -91,9 +97,12 @@ function MenuPage() {
                </div>
                <div className="offset-xl-1 col-xl-6">
                   <div className="menu_page_wrap_content">
+                     {/* A La Carte Facial Menu Section */}
+                     <h2 className="menu_page_wrap_content_section-title">{aLaCarteFacialMenu.h2Title}</h2>
                      {
-                        listMenu?.map(item => (
-                           <a href={item?.link} target='_blank' className="menu_page_wrap_content_item" rel='nofollow noreferrer' key={nanoid(4)}>
+                        aLaCarteItems?.map(item => (
+                           // <a href={item?.link} target='_blank' className="menu_page_wrap_content_item" rel='nofollow noreferrer' key={nanoid(4)}>
+                           <div className="menu_page_wrap_content_item" key={nanoid(4)}>
                               <div className="menu_page_wrap_content_item_left">
                                  <h3 className="menu_page_wrap_content_item_left-title">
                                     {item?.title}
@@ -106,7 +115,7 @@ function MenuPage() {
                                     }
                                  </div>
                               </div>
-                              <div className="menu_page_wrap_content_item-icon">
+                              {/* <div className="menu_page_wrap_content_item-icon">
                                  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
                                     <g filter="url(#filter0_b_1947_2595)">
                                        <rect width="34" height="34" rx="17" fill="white" fillOpacity="0.2" />
@@ -121,14 +130,18 @@ function MenuPage() {
                                        </filter>
                                     </defs>
                                  </svg>
-                              </div>
-                           </a>
+                              </div> */}
+                           </div>
+                           // </a>
                         ))
                      }
-                     <h2 className="menu_page_wrap_content_item_left-title">Membership Tiers</h2>
+                     
+                     {/* Individual Services Section */}
+                     <h2 className="menu_page_wrap_content_section-title">{individualServices.h2Title}</h2>
                      {
-                        memberships?.map(item => (
-                           <a href={item?.link} target='_blank' className="menu_page_wrap_content_item" rel='nofollow noreferrer' key={nanoid(4)}>
+                        individualServicesList?.map(item => (
+                           // <a href={item?.link} target='_blank' className="menu_page_wrap_content_item" rel='nofollow noreferrer' key={nanoid(4)}>
+                           <div className="menu_page_wrap_content_item" key={nanoid(4)}>
                               <div className="menu_page_wrap_content_item_left">
                                  <h3 className="menu_page_wrap_content_item_left-title">
                                     {item?.title}
@@ -141,7 +154,7 @@ function MenuPage() {
                                     }
                                  </div>
                               </div>
-                              <div className="menu_page_wrap_content_item-icon">
+                              {/* <div className="menu_page_wrap_content_item-icon">
                                  <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
                                     <g filter="url(#filter0_b_1947_2595)">
                                        <rect width="34" height="34" rx="17" fill="white" fillOpacity="0.2" />
@@ -156,8 +169,87 @@ function MenuPage() {
                                        </filter>
                                     </defs>
                                  </svg>
+                              </div> */}
+                           </div>
+                           // </a>
+                        ))
+                     }
+                     
+                     {/* Signature Treatment Packages Section */}
+                     <h2 className="menu_page_wrap_content_section-title">{signaturePackages.h2Title}</h2>
+                     {
+                        signaturePackagesList?.map(item => (
+                           // <a href={item?.link} target='_blank' className="menu_page_wrap_content_item" rel='nofollow noreferrer' key={nanoid(4)}>
+                           <div className="menu_page_wrap_content_item" key={nanoid(4)}>
+                              <div className="menu_page_wrap_content_item_left">
+                                 <h3 className="menu_page_wrap_content_item_left-title">
+                                    {item?.title}
+                                 </h3>
+                                 <div className="menu_page_wrap_content_item_left_text">
+                                    {
+                                       item?.textList?.map(text => (
+                                          <div className="menu_page_wrap_content_item_left_text-item" key={nanoid(4)} dangerouslySetInnerHTML={{ __html: text?.text }} />
+                                       ))
+                                    }
+                                 </div>
                               </div>
-                           </a>
+                              {/* <div className="menu_page_wrap_content_item-icon">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                    <g filter="url(#filter0_b_1947_2595)">
+                                       <rect width="34" height="34" rx="17" fill="white" fillOpacity="0.2" />
+                                       <path d="M14.3708 19.9885L20 14M20 14L20.3708 19.9885M20 14H14" stroke="white" strokeWidth="1.4" strokeLinecap="square" />
+                                    </g>
+                                    <defs>
+                                       <filter id="filter0_b_1947_2595" x="-50" y="-50" width="134" height="134" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                                          <feGaussianBlur in="BackgroundImageFix" stdDeviation="25" />
+                                          <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1947_2595" />
+                                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1947_2595" result="shape" />
+                                       </filter>
+                                    </defs>
+                                 </svg>
+                              </div> */}
+                           </div>
+                           // </a>
+                        ))
+                     }
+                     
+                     {/* Membership Tiers Section */}
+                     <h2 className="menu_page_wrap_content_section-title">{membershipTiers.h2Title}</h2>
+                     {
+                        memberships?.map(item => (
+                           // <a href={item?.link} target='_blank' className="menu_page_wrap_content_item" rel='nofollow noreferrer' key={nanoid(4)}>
+                           <div className="menu_page_wrap_content_item" key={nanoid(4)}>
+                              <div className="menu_page_wrap_content_item_left">
+                                 <h3 className="menu_page_wrap_content_item_left-title">
+                                    {item?.title}
+                                 </h3>
+                                 <div className="menu_page_wrap_content_item_left_text">
+                                    {
+                                       item?.textList?.map(text => (
+                                          <div className="menu_page_wrap_content_item_left_text-item" key={nanoid(4)} dangerouslySetInnerHTML={{ __html: text?.text }} />
+                                       ))
+                                    }
+                                 </div>
+                              </div>
+                              {/* <div className="menu_page_wrap_content_item-icon">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
+                                    <g filter="url(#filter0_b_1947_2595)">
+                                       <rect width="34" height="34" rx="17" fill="white" fillOpacity="0.2" />
+                                       <path d="M14.3708 19.9885L20 14M20 14L20.3708 19.9885M20 14H14" stroke="white" strokeWidth="1.4" strokeLinecap="square" />
+                                    </g>
+                                    <defs>
+                                       <filter id="filter0_b_1947_2595" x="-50" y="-50" width="134" height="134" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                                          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                                          <feGaussianBlur in="BackgroundImageFix" stdDeviation="25" />
+                                          <feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_1947_2595" />
+                                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_1947_2595" result="shape" />
+                                       </filter>
+                                    </defs>
+                                 </svg>
+                              </div> */}
+                           </div>
+                           // </a>
                         ))
                      }
                   </div>
