@@ -5,12 +5,12 @@ const app = express();
 // Use Railway's PORT or fallback to 8080
 const PORT = process.env.PORT || 8080;
 
-// Serve static files from build directory
-app.use(express.static(path.join(__dirname, 'build')));
+// Serve static files from current directory instead of build
+app.use(express.static(__dirname));
 
 // Handle React routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Add health check endpoint
