@@ -1,0 +1,139 @@
+@import './scss/reset.scss',
+'./scss/fonts.scss';
+@import './scss/media';
+
+html,
+body {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+}
+
+html {
+  &.overflow-hidden {
+    overflow-y: hidden;
+    padding-right: 6px;
+  }
+}
+
+body {
+  color: #fff;
+  font-family: "Gilroy", sans-serif;
+  background-color: #252323;
+  font-size: 16px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #929191;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #56DAB0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+main {
+  margin-top: 70px;
+  flex: 1 1 auto;
+
+  @include desktop {
+    margin-top: 54px;
+  }
+
+  @include tablet {
+    margin-top: 50px;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: none;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @include tablet {
+    padding: 0 17px;
+  }
+
+  @include mobile {
+    padding: 0 12px;
+  }
+}
+
+h2 {
+  color: #FFF;
+
+  font-size: clamp(3.125rem, 0rem + 3.125vw, 3.75rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: clamp(3.125rem, 0rem + 3.125vw, 3.75rem);
+  letter-spacing: -1.2px;
+
+  &.black {
+    color: #848685;
+  }
+
+  @include desktop {
+    font-size: clamp(2.25rem, -2.125rem + 5.833vw, 3.125rem);
+    line-height: clamp(2.25rem, -2.125rem + 5.833vw, 3.125rem);
+    letter-spacing: -1px;
+  }
+
+  @include tablet {
+    font-size: 28px;
+    line-height: 28px;
+    letter-spacing: unset;
+  }
+}
+
+.row {
+  --bs-gutter-x: 40px;
+
+  @include tablet {
+    --bs-gutter-x: 10px;
+  }
+
+  @include mobile {
+    --bs-gutter-x: 15px;
+  }
+}
+
+// .fadeIn {
+//   animation: 0.5s fadeIn forwards;
+// }
+
+// .fadeOut {
+//   animation: 0.5s fadeOut forwards;
+// }
+
+// @keyframes fadeIn {
+//   from {
+//     opacity: 0;
+//     transform: translate(-100%, 0);
+//   }
+
+//   to {
+//     opacity: 1;
+//     transform: translate(0px, 0px);
+//   }
+// }
+
+// @keyframes fadeOut {
+//   from {
+//     opacity: 1;
+//     transform: translate(0px, 0px);
+//   }
+
+//   to {
+//     transform: translate(100%, 0);
+//     opacity: 0;
+//   }
+// }

@@ -1,0 +1,192 @@
+@use '../../../../../../scss/media.scss';
+
+.protocol_in_card {
+   position: absolute;
+   padding: 30px 30px 50px 30px;
+   border-radius: 10px;
+   overflow: hidden;
+   opacity: 0;
+   visibility: hidden;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   max-height: 100%;
+   transition: .4s;
+   transition-delay: 0s;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+
+   --mobileRightPadding: 8px;
+
+   @include media.tablet {
+      padding: 20px 20px 30px 20px;
+   }
+
+   @include media.mobile {
+      padding: 16px 16px 30px 16px;
+      padding-right: var(--mobileRightPadding);
+   }
+
+   &.active {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: .2s;
+   }
+
+   &_wrap {
+      margin-top: 80px;
+      flex: 1 1 auto;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      @include media.tablet {
+         margin-top: 20px;
+      }
+   }
+
+   &-btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 70px;
+
+      @include media.tablet {
+         margin-top: 20px;
+      }
+
+      @include media.mobile {
+         padding-right: var(--mobileRightPadding);
+      }
+
+      &-el {
+         span {
+            display: inline-flex;
+            column-gap: 10px;
+            align-items: center;
+
+            .icon {
+               display: flex;
+               width: 12px;
+               height: 12px;
+               transition: .4s;
+
+               @include media.tablet {
+                  width: 10px;
+                  height: 10px;
+               }
+
+               svg {
+                  width: 100%;
+                  height: 100%;
+                  transition: .4s;
+
+                  path {
+                     transition: .4s;
+                  }
+               }
+            }
+         }
+
+         @include media.hover {
+            .icon {
+               transform: translateX(5px);
+
+               svg {
+                  path {
+                     stroke: #FFF;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   &-bg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: url("../../../../../../../public/img/FrontPage/packages/in-card-bg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -1;
+      user-select: none;
+      pointer-events: none;
+      filter: brightness(.8) blur(100px);
+
+      // &::after {
+      //    content: '';
+      //    display: block;
+      //    width: 100%;
+      //    height: 100%;
+      //    position: absolute;
+      //    top: 0;
+      //    left: 0;
+      //    backdrop-filter: blur(100px);
+      // }
+   }
+
+   .protocol_in_card_head-back {
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+
+      color: #FFF;
+      font-size: 24px;
+      font-size: media.fluid-media(24, 18);
+      font-weight: 500;
+      line-height: 30px;
+      line-height: media.fluid-media(30, 26);
+      position: absolute;
+      top: 30px;
+      left: 30px;
+
+      transition: .4s;
+
+      @include media.desktop {
+         font-size: 18px;
+         line-height: 26px;
+      }
+
+      @include media.tablet {
+         font-size: 12px;
+         line-height: 18px;
+         column-gap: 8px;
+         top: 20px;
+         left: 20px;
+      }
+
+      @include media.mobile {
+         top: 16px;
+         left: 16px;
+      }
+
+      @include media.hover {
+         opacity: .7;
+      }
+
+      .icon {
+         display: flex;
+         width: 12px;
+         width: media.fluid-media(12, 8);
+         height: 12px;
+         height: media.fluid-media(12, 8);
+
+         @include media.desktop {
+            width: 8px;
+            height: 8px;
+         }
+
+         svg {
+            width: 100%;
+            height: 100%;
+         }
+      }
+   }
+}

@@ -1,0 +1,134 @@
+@import '../../../scss/media';
+
+.btn_big {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   padding: 13px 26px;
+   background: transparent;
+   border-radius: 50px;
+   border: 1px solid #fff;
+   overflow: hidden;
+
+   color: #fff;
+
+   font-family: Gilroy;
+   font-size: 24px;
+   font-style: normal;
+   font-weight: 500;
+   line-height: 30px;
+
+   transition-property: color, background-color, border-color;
+   transition-duration: .45s, 0s, 0s;
+   transition-delay: 0s, 0s, 0s;
+
+   @include desktop {
+      padding: 9px 20px;
+
+      font-size: 18px;
+      line-height: 24px;
+   }
+
+   @include tablet {
+      font-size: 14px;
+      line-height: 20px;
+   }
+
+   &.border {
+      border: none !important;
+      padding: 14px 26px;
+
+      @include desktop {
+         padding: 10px 20px;
+      }
+   }
+
+   &.green {
+      background: #56DAB0;
+      color: #fff;
+      border-color: #56DAB0;
+   }
+
+   &.white {
+      background: #fff;
+      color: #252323;
+      border-color: #fff;
+   }
+
+   &.greenBlack {
+      color: #fff;
+      border-color: #56DAB0;
+      background: #56DAB0;
+   }
+
+   &.gray {
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.20);
+      backdrop-filter: blur(25px);
+      border: unset;
+   }
+
+   span {
+      position: relative;
+      z-index: 2;
+      user-select: none;
+      pointer-events: none;
+   }
+
+   .btn_bg {
+      position: absolute;
+      width: 100%;
+      height: 0%;
+      background: #252323;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      transition: .45s;
+      z-index: 1;
+      border-radius: 50% 50% 0 0;
+
+      &.green {
+         background: #56DAB0;
+      }
+
+      &.white {
+         background: #fff;
+      }
+
+      &.black {
+         background: #252323;
+      }
+   }
+
+   @include hover {
+      color: #fff;
+      background: transparent;
+      border-color: #56DAB0;
+      transition-duration: .25s, 0s, 0s;
+      transition-delay: 0s, .2s, 0s;
+
+      &.green {
+         color: #252323;
+         background: #fff;
+         border-color: #fff;
+      }
+
+      &.white {
+         color: #fff;
+         background: #56DAB0;
+         border-color: #56DAB0;
+      }
+
+      &.greenBlack {
+         color: #fff;
+         background: #252323;
+         border-color: #252323;
+      }
+
+      .btn_bg {
+         height: 150%;
+         border-radius: 25% 25% 0px 0px;
+      }
+   }
+}

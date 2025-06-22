@@ -1,0 +1,339 @@
+@use '../../scss/media';
+
+.menu_page {
+   border-bottom: 1px solid #929191;
+
+   &_wrap {
+      height: 100%;
+
+      @include media.desktop {
+         height: auto;
+      }
+
+      .col-xl-4 {
+         padding-left: 0px;
+         padding-right: 0px;
+         border-right: 1px solid #929191;
+         margin-left: -20px;
+
+         @include media.tablet {
+            margin-left: 0px;
+            padding-right: calc(var(--bs-gutter-x)* 0.5);
+            padding-left: calc(var(--bs-gutter-x)* 0.5);
+            border-right: unset;
+         }
+      }
+
+      &_left {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         row-gap: 40px;
+         position: relative;
+         width: 100%;
+         padding: 84px 0px 128px 40px;
+         min-height: calc(100dvh - 70px);
+         position: sticky;
+         top: 70px;
+
+         @include media.tablet {
+            padding: 0px;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: unset;
+            position: relative;
+            row-gap: 0px;
+            top: unset;
+         }
+
+         .breadcrumbs_abs {
+
+            @include media.tablet {
+               position: relative;
+               top: unset;
+               bottom: unset;
+               left: unset;
+               right: unset;
+               width: 100%;
+               padding: 16px 0;
+
+               &::after {
+                  content: '';
+                  display: block;
+                  width: calc(100% + 40px);
+                  height: 1px;
+                  background: #929191;
+                  position: absolute;
+                  bottom: 0;
+                  left: calc(0px - 20px);
+               }
+            }
+
+
+            &__list {}
+         }
+
+         &-icon {
+            display: flex;
+            width: 80px;
+            width: media.fluid-media(80, 60);
+            height: 80px;
+            height: media.fluid-media(80, 60);
+            justify-content: center;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            animation-name: iconRotate;
+            animation-duration: 20s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            @include media.desktop {
+               width: 60px;
+               height: 60px;
+            }
+
+            @include media.tablet {
+               width: 40px;
+               height: 40px;
+
+               margin-top: 133px;
+            }
+
+            @include media.mobile {
+               margin-top: 50px;
+            }
+
+            svg {
+               width: 100%;
+               height: 100%;
+            }
+         }
+
+         &-title {
+            max-width: 670px;
+            padding: 0 20px;
+
+            color: #FFF;
+            text-align: center;
+            font-size: 80px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 80px;
+            letter-spacing: -2.4px;
+
+            @include media.desktop {
+               max-width: 446px;
+
+               font-size: 50px;
+               font-weight: 500;
+               line-height: 46px;
+               letter-spacing: -1px;
+            }
+
+            @include media.tablet {
+               font-size: 48px;
+               font-weight: 500;
+               line-height: 48px;
+               letter-spacing: -0.96px;
+
+               margin-top: 24px;
+            }
+         }
+
+         &-btn {
+            position: absolute;
+            bottom: 30px;
+
+            @include media.tablet {
+               position: unset;
+               margin-bottom: 133px;
+               margin-top: 24px;
+            }
+
+            @include media.mobile {
+               margin-bottom: 50px;
+            }
+         }
+
+         &-bg {
+            display: flex;
+            width: 450px;
+            max-width: 100%;
+            height: 450px;
+            aspect-ratio: 1/1;
+            border-radius: 616px;
+            background: rgba(245, 235, 205, 0.30);
+            filter: blur(150px);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+
+            @include media.desktop {
+               width: 360px;
+               height: 360px;
+               border-radius: 360px;
+               background: rgba(245, 235, 205, 0.30);
+               filter: blur(150px);
+            }
+
+            @include media.tablet {
+               background: rgba(245, 235, 205, 0.40);
+               filter: blur(150px);
+               width: 229px;
+               height: 229px;
+               top: 50%;
+               transform: translateY(-50%);
+            }
+         }
+
+      }
+
+      &_content {
+         display: flex;
+         flex-direction: column;
+         padding-top: 60px;
+         margin-bottom: 100px;
+
+         @include media.tablet {
+            padding-top: 0px;
+            margin-bottom: 0px;
+         }
+
+         &_item {
+            display: flex;
+            align-items: center;
+            column-gap: 82px;
+            justify-content: space-between;
+            border-top: 1px solid #555554;
+            padding-top: 40px;
+            padding-top: media.fluid-media(40, 30);
+            padding-bottom: 40px;
+            padding-bottom: media.fluid-media(40, 30);
+
+            @include media.desktop {
+               padding-top: 30px;
+               padding-bottom: 30px;
+            }
+
+            @include media.tablet {
+               column-gap: 20px;
+               padding-top: 24px;
+               padding-bottom: 24px;
+               border: unset;
+               position: relative;
+
+               &::after {
+                  @include media.tablet {
+                     content: '';
+                     display: block;
+                     width: calc(100% + 40px);
+                     height: 1px;
+                     position: absolute;
+                     top: 0;
+                     left: 50%;
+                     transform: translateX(-50%);
+                     background: #929191;
+                  }
+               }
+            }
+
+            &:last-child {
+               border-bottom: 1px solid #555554;
+
+               @include media.tablet {
+                  border-bottom: 1px solid transparent;
+               }
+            }
+
+            /* @include media.hover {
+               .menu_page_wrap_content_item-icon {
+                  svg {
+                     rect {
+                        fill: #56DAB0;
+                        fill-opacity: 1;
+                     }
+                  }
+               }
+            } */
+
+            &_left {
+               display: flex;
+               flex-direction: column;
+               row-gap: 16px;
+               width: 100%;
+               max-width: calc(100% - 82px - 34px);
+
+               @include media.tablet {
+                  max-width: calc(100% - 20px - 34px);
+               }
+
+               &-title {
+                  color: #FFF;
+                  font-family: Gilroy;
+                  font-size: 30px;
+                  font-size: media.fluid-media(30, 18);
+                  font-weight: 500;
+                  line-height: 36px;
+                  line-height: media.fluid-media(36, 24);
+
+                  @include media.desktop {
+                     font-size: 18px;
+                     line-height: 24px;
+                  }
+
+                  @include media.tablet {
+                     font-size: 20px;
+                     line-height: 24px;
+                  }
+               }
+
+               &_text {
+                  display: flex;
+                  flex-direction: column;
+                  row-gap: 12px;
+
+                  &-item {
+                     color: #848685;
+                     font-family: Gilroy;
+                     font-size: 18px;
+                     font-size: media.fluid-media(18, 14);
+                     font-weight: 500;
+                     line-height: 24px;
+                     line-height: media.fluid-media(24, 20);
+
+                     @include media.desktop {
+                        font-size: 14px;
+                        line-height: 20px;
+                     }
+                  }
+               }}
+
+            /* &-icon {
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               width: 34px;
+               height: 34px;
+               aspect-ratio: 1/1;
+               overflow: hidden;
+               border-radius: 50%;
+
+               svg,
+               img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: contain;
+                  transition: .4s;
+
+                  rect {
+                     transition: .4s;
+                  }
+               }
+            } */
+         }
+      }
+   }
+}

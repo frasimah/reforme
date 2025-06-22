@@ -1,0 +1,374 @@
+{
+  "aLaCarteFacialMenu": {
+    "h2Title": "A La Carte Facial Menu",
+    "items": [
+      {
+        "name": "Biologique Recherche Facial (60 min)",
+        "price": "$300"
+      },
+      {
+        "name": "Express Facial (30 min)",
+        "price": "$150"
+      },
+      {
+        "name": "Signature Reforme Facial (75 min)",
+        "price": "$400"
+      },
+      {
+        "name": "Signature Reforme Facial (90 min)",
+        "price": "$500"
+      }
+    ]
+  },
+  "individualServices": {
+    "h2Title": "Individual Services & Treatment Packages",
+    "endospheresTherapy": {
+      "name": "Endospheres Therapy",
+      "options": [
+        {
+          "name": "Face (single session)",
+          "price": "$175"
+        },
+        {
+          "name": "Body (single session)",
+          "price": "$280"
+        },
+        {
+          "name": "Package of 6 (Face)",
+          "price": "$990",
+          "details": "$165/session"
+        },
+        {
+          "name": "Package of 9 (Face)",
+          "price": "$1,350",
+          "details": "$150/session"
+        },
+        {
+          "name": "Package of 6 (Body)",
+          "price": "$1,560",
+          "details": "$260/session"
+        },
+        {
+          "name": "Package of 9 (Body)",
+          "price": "$2,250",
+          "details": "$250/session"
+        }
+      ]
+    },
+    "ballancerPro": {
+      "name": "BallancerPro Compression Therapy",
+      "options": [
+        {
+          "name": "30 min session",
+          "price": "$150"
+        },
+        {
+          "name": "45 min session",
+          "price": "$175"
+        },
+        {
+          "name": "Package of 5 (30 min)",
+          "price": "$700",
+          "details": "$140/session"
+        },
+        {
+          "name": "Package of 10 (30 min)",
+          "price": "$1,300",
+          "details": "$130/session"
+        }
+      ]
+    },
+    "ledCollagenBed": {
+      "name": "LED Collagen Bed / Red Light Therapy (Full Body)",
+      "options": [
+        {
+          "name": "Single session (20 min)",
+          "price": "$125"
+        },
+        {
+          "name": "Package of 5",
+          "price": "$575",
+          "details": "$115/session"
+        },
+        {
+          "name": "Package of 10",
+          "price": "$1,100",
+          "details": "$110/session"
+        }
+      ]
+    },
+    "iyashiDome": {
+      "name": "Iyashi Dôme Japanese Sauna",
+      "options": [
+        {
+          "name": "Single session",
+          "price": "$150"
+        },
+        {
+          "name": "Package of 5",
+          "price": "$700",
+          "details": "$140/session"
+        },
+        {
+          "name": "Package of 10",
+          "price": "$1,300",
+          "details": "$130/session"
+        }
+      ]
+    },
+    "hbot": {
+      "name": "Hyperbaric Oxygen Therapy (HBOT)",
+      "options": [
+        {
+          "name": "30 min session",
+          "price": "$125"
+        },
+        {
+          "name": "60 min session",
+          "price": "$225"
+        },
+        {
+          "name": "Package of 5 (30 min)",
+          "price": "$575",
+          "details": "$115/session"
+        },
+        {
+          "name": "Package of 10 (30 min)",
+          "price": "$1,100",
+          "details": "$110/session"
+        }
+      ]
+    },
+    "btlEmsella": {
+      "name": "BTL Emsella Chair",
+      "options": [
+        {
+          "name": "Single session",
+          "price": "$350"
+        },
+        {
+          "name": "Package of 6",
+          "price": "$1,980",
+          "details": "$330/session"
+        },
+        {
+          "name": "Package of 10",
+          "price": "$3,000",
+          "details": "$300/session"
+        }
+      ]
+    },
+    "ivTherapy": {
+      "name": "IV Therapy",
+      "options": [
+        {
+          "name": "Hangover Recovery Drip",
+          "price": "$200"
+        },
+        {
+          "name": "Immune Boost or Vitamin C Drip",
+          "price": "$300"
+        },
+        {
+          "name": "NAD+ Drip",
+          "price": "$450"
+        }
+      ]
+    }
+  },
+  "signaturePackages": {
+    "h2Title": "Signature Treatment Packages",
+    "items": [
+      {
+        "name": "Runner's Recovery Package",
+        "price": "$425",
+        "services": [
+          "BallancerPro Compression Therapy (45 min)",
+          "Hyperbaric Oxygen Therapy (30 min)",
+          "Iyashi Dôme Japanese Sauna"
+        ]
+      },
+      {
+        "name": "Glow & Go Package",
+        "price": "$505",
+        "services": [
+          "Endospheres Full Body Therapy",
+          "LED Collagen Bed",
+          "Express Facial"
+        ]
+      },
+      {
+        "name": "Deep Detox Package",
+        "price": "$505",
+        "services": [
+          "Iyashi Dôme Japanese Sauna",
+          "Endospheres Body Therapy",
+          "Red Light Therapy"
+        ]
+      },
+      {
+        "name": "Core Confidence Package",
+        "price": "$625",
+        "services": [
+          "BTL Emsella Chair",
+          "Hyperbaric Oxygen Therapy (30 min)",
+          "BallancerPro Compression Therapy (30 min)"
+        ]
+      },
+      {
+        "name": "Radiance Ritual Package",
+        "price": "$550",
+        "services": [
+          "Biologique Recherche Signature Facial (60 min)",
+          "LED Collagen Bed",
+          "Red Light Therapy"
+        ]
+      },
+      {
+        "name": "Jet Lag Revival Package",
+        "price": "$425",
+        "services": [
+          "Hyperbaric Oxygen Therapy (30 min)",
+          "BallancerPro Compression Therapy (30 min)",
+          "Red Light Therapy"
+        ]
+      },
+      {
+        "name": "Bridal Body Prep Package",
+        "price": "$755",
+        "services": [
+          "Endospheres Body Therapy",
+          "BallancerPro Compression Therapy (45 min)",
+          "Biologique Recherche Facial",
+          "LED Collagen Bed"
+        ]
+      },
+      {
+        "name": "Sleep Reset Package",
+        "price": "$425",
+        "services": [
+          "Red Light Therapy",
+          "Iyashi Dôme Sauna",
+          "Hyperbaric Oxygen Therapy (30 min)"
+        ]
+      },
+      {
+        "name": "Men's Reboot Package",
+        "price": "$600",
+        "services": [
+          "BTL Emsella Chair",
+          "Red Light Therapy",
+          "Hyperbaric Oxygen Therapy (30 min)"
+        ]
+      },
+      {
+        "name": "Weekend Wellness Package",
+        "price": "$780",
+        "services": [
+          "Endospheres Body Therapy",
+          "Iyashi Dôme Sauna",
+          "LED Collagen Bed",
+          "Biologique Recherche Facial"
+        ]
+      },
+      {
+        "name": "Red Carpet Package",
+        "price": "$850",
+        "services": [
+          "Endospheres Therapy (Face + Body)",
+          "LED Collagen Bed",
+          "Biologique Recherche Signature Facial",
+          "BallancerPro Compression Therapy (45 min)"
+        ]
+      },
+      {
+        "name": "Sculpt & Contour Package",
+        "price": "$605",
+        "services": [
+          "Endospheres Body Therapy",
+          "BallancerPro Compression Therapy (30 min)",
+          "Iyashi Dôme Sauna"
+        ]
+      },
+      {
+        "name": "Mental Clarity Package",
+        "price": "$425",
+        "services": [
+          "Red Light Therapy",
+          "Hyperbaric Oxygen Therapy (30 min)",
+          "Iyashi Dôme Sauna"
+        ]
+      },
+      {
+        "name": "Boss Mode Package",
+        "price": "$600",
+        "services": [
+          "BTL Emsella Chair",
+          "Hyperbaric Oxygen Therapy (30 min)",
+          "Red Light Therapy"
+        ]
+      },
+      {
+        "name": "Inner Harmony Package",
+        "price": "$705",
+        "services": [
+          "BTL Emsella Chair",
+          "Endospheres Body Therapy",
+          "Iyashi Dôme Sauna"
+        ]
+      },
+      {
+        "name": "Weekend Reset Package",
+        "price": "$425",
+        "services": [
+          "BallancerPro Compression Therapy (30 min)",
+          "Iyashi Dôme Sauna",
+          "LED Collagen Bed"
+        ]
+      },
+      {
+        "name": "Energy Recharge Package",
+        "price": "$425",
+        "services": [
+          "Hyperbaric Oxygen Therapy (30 min)",
+          "Red Light Therapy",
+          "BallancerPro Compression Therapy (30 min)"
+        ]
+      }
+    ]
+  },
+  "membershipTiers": {
+    "h2Title": "Reforme Membership Tiers",
+    "items": [
+      {
+        "name": "Reforme Reset",
+        "price": "$395/month",
+        "benefits": [
+          "4 sessions/month (any 50-60 min service)",
+          "15% off retail & add-ons",
+          "Priority scheduling"
+        ]
+      },
+      {
+        "name": "Reforme Recharge",
+        "price": "$595/month",
+        "benefits": [
+          "8 (30 min) sessions/month (mix & match packages or core therapies)",
+          "15% off retail & add-ons",
+          "One complimentary guest pass/month for 30 min treatment"
+        ]
+      },
+      {
+        "name": "Reforme Unlimited Elite",
+        "price": "$950/month",
+        "benefits": [
+          "Weekly Red light or BallancerPro",
+          "3 premium services (60 min Facial, 60 min Endospheres, 60 min HBOT, Emsella) included",
+          "VIP early access to events & exclusive treatments",
+          "15% off retail & add-ons",
+          "One complimentary guest pass/month for 30 min treatment"
+        ]
+      }
+    ]
+  }
+}

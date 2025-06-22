@@ -1,0 +1,89 @@
+.service_single {
+  border-bottom: 1px solid #929191;
+}
+@media screen and (max-width: 767px) {
+  .service_single {
+    border-bottom: none;
+  }
+}
+.service_single .front_head__left .top {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+@media screen and (max-width: 1199px) {
+  .service_single .front_head__left .top {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .service_single .front_head__left .top {
+    padding-top: 70px;
+    padding-bottom: 50px;
+  }
+}
+.service_single .front_head__left .top h1 {
+  max-width: 670px;
+  padding: 0 20px;
+}
+@media screen and (max-width: 1599px) {
+  .service_single .front_head__left .top h1 {
+    max-width: 446px;
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 46px;
+    letter-spacing: -1px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .service_single .front_head__left .top h1 {
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: -0.96px;
+  }
+}
+.service_single .front_head__left .top .text {
+  max-width: 590px;
+}
+@media screen and (max-width: 1599px) {
+  .service_single .front_head__left .top .text {
+    max-width: 430px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .service_single .front_head__left .top .text {
+    max-width: 100%;
+    max-width: 500px;
+    padding: 0 30px;
+  }
+}
+.service_single .front_head__left .list {
+  display: flex;
+}
+.service_single .front_head__left .list .item {
+  border-right: none;
+  padding: 20px 40px;
+}
+@media screen and (max-width: 1199px) {
+  .service_single .front_head__left .list .item {
+    padding: 14px 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .service_single .front_head__left .list .item span {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+.service_single .col-md-6.image {
+  border-left: 1px solid #929191;
+}
+@media screen and (max-width: 767px) {
+  .service_single .col-md-6.image {
+    border-left: none;
+  }
+}

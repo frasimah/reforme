@@ -1,0 +1,160 @@
+@use '../../../../../scss/media.scss';
+
+.protocol_head {
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+   max-width: 900px;
+   max-width: media.fluid-media(900, 660);
+
+   @include media.desktop {
+      max-width: 660px;
+   }
+
+   @include media.tablet {
+      max-width: 610px;
+   }
+
+   &-subtitle {
+      color: #FFF;
+      text-align: center;
+      font-size: 24px;
+      font-size: media.fluid-media(24, 18);
+      font-weight: 500;
+      line-height: 30px;
+      line-height: media.fluid-media(30, 26);
+      text-transform: uppercase;
+
+      @include media.desktop {
+         font-size: 18px;
+         line-height: 26px;
+      }
+
+      @include media.tablet {
+         font-size: 14px;
+         line-height: 20px;
+      }
+
+      @include media.mobile {
+         text-align: left;
+      }
+   }
+
+   &-title {
+      color: #FFF;
+      text-align: center;
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 56px;
+      letter-spacing: -1px;
+
+      margin-top: 40px;
+
+      @include media.tablet {
+         margin-top: 24px;
+
+         font-size: 28px;
+         line-height: 28px;
+      }
+
+      @include media.mobile {
+         text-align: left;
+      }
+   }
+
+   &-text {
+      color: #FFF;
+      text-align: center;
+      font-size: 24px;
+      font-size: media.fluid-media(24, 18);
+      font-weight: 500;
+      line-height: 30px;
+      line-height: media.fluid-media(30, 26);
+
+      margin-top: 30px;
+
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+
+      @include media.desktop {
+         font-size: 18px;
+         line-height: 26px;
+      }
+
+      @include media.tablet {
+         margin-top: 24px;
+         row-gap: 24px;
+
+         font-size: 14px;
+         line-height: 20px;
+      }
+
+      @include media.mobile {
+         text-align: left;
+      }
+   }
+
+   &_message {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      row-gap: 40px;
+      margin-top: 60px;
+
+      @include media.tablet {
+         margin-top: 24px;
+      }
+
+      @include media.mobile {
+         align-items: flex-start;
+      }
+
+      &-icon {
+         display: flex;
+         width: 40px;
+         width: media.fluid-media(40, 30);
+         height: 40px;
+         height: media.fluid-media(40, 30);
+
+         @include media.desktop {
+            width: 30px;
+            height: 30px;
+         }
+
+         @include media.tablet {
+            display: none;
+         }
+
+         svg {
+            width: 100%;
+            height: 100%;
+         }
+      }
+
+      &-text {
+         color: #56DAB0;
+         text-align: center;
+         font-size: 24px;
+         font-size: media.fluid-media(24, 18);
+         font-weight: 500;
+         line-height: 30px;
+         line-height: media.fluid-media(30, 26);
+         text-transform: uppercase;
+
+         @include media.desktop {
+            font-size: 18px;
+            line-height: 26px;
+         }
+
+         @include media.tablet {
+            font-size: 14px;
+            line-height: 20px;
+         }
+
+         @include media.mobile {
+            text-align: left;
+         }
+      }
+   }
+}

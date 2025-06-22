@@ -1,0 +1,348 @@
+@import '../../../../scss/media.scss';
+
+.front_head {
+   --bs-gutter-x: 0px;
+   border-bottom: 1px solid #929191;
+
+   @include tablet {
+      border-bottom: none;
+   }
+
+   &__left {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+
+      .top {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+         flex: 1 1 auto;
+         padding: 30px;
+
+         @include desktop {
+            padding-top: 60px;
+            padding-bottom: 60px;
+         }
+
+         @include tablet {
+            padding-top: 54px;
+            padding-bottom: 54px;
+            justify-content: center;
+         }
+
+         @include mobile {
+            padding-top: 50px;
+            padding-bottom: 50px;
+         }
+
+         .icon {
+            width: 80px;
+            justify-content: center;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+
+            animation-name: iconRotate;
+            animation-duration: 20s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+            @include desktop {
+               width: 60px;
+            }
+
+            @include tablet {
+               width: 40px;
+            }
+
+            svg {
+               width: 100%;
+               height: 100%;
+            }
+
+            @keyframes iconRotate {
+               to {
+                  transform: rotate(360deg);
+               }
+            }
+         }
+
+         .sub_text {
+            color: #FFF;
+            text-align: center;
+            font-size: 18px;
+            font-size: fl(18, 14);
+            font-weight: 500;
+            line-height: 26px;
+            line-height: fl(26, 20);
+            text-transform: uppercase;
+            margin-top: 60px;
+            margin-top: fl(60, 40);
+
+            @include desktop {
+               margin-top: 40px;
+
+               font-size: 14px;
+               line-height: 20px;
+            }
+
+            @include tablet {
+               margin-top: 24px;
+               max-width: 190px;
+            }
+         }
+
+         h1 {
+            color: #FFF;
+            text-align: center;
+
+            font-size: 80px;
+            font-size: fl(80, 64);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 80px;
+            line-height: fl(80, 64);
+            letter-spacing: -2.4px;
+
+            margin-top: 32px;
+            margin-top: fl(32, 24);
+
+            @include desktop {
+               font-size: 64px;
+               line-height: 64px;
+               letter-spacing: -2.22px;
+
+               margin-top: 24px;
+            }
+
+            @include tablet {
+               font-size: 48px;
+               line-height: 48px;
+               letter-spacing: -0.96px;
+            }
+         }
+
+         .text {
+            margin-top: 40px;
+            margin-top: fl(40, 30);
+            color: #FFF;
+            text-align: center;
+
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 30px;
+
+            max-width: 590px;
+
+            @include desktop {
+               font-size: 18px;
+               line-height: 24px;
+               max-width: 450px;
+
+               margin-top: 30px;
+            }
+
+            @include tablet {
+               font-size: 14px;
+               line-height: 20px;
+               max-width: 335px;
+
+               margin-top: 24px;
+            }
+         }
+
+         .sign {
+            display: none;
+            position: relative;
+            overflow: hidden;
+            transition: .45s;
+            margin-top: 24px;
+
+            @include tablet {
+               display: inline-flex;
+               justify-content: center;
+               align-items: center;
+
+               color: #848685;
+            }
+
+            span {
+               position: relative;
+               z-index: 2;
+            }
+         }
+
+         .bg {
+            display: flex;
+            width: 616px;
+            max-width: 100%;
+            height: 616px;
+            aspect-ratio: 1/1;
+            border-radius: 616px;
+            background: rgba(245, 235, 205, 0.30);
+            filter: blur(150px);
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: -1;
+
+            @include desktop {
+               width: 360px;
+               height: 360px;
+               border-radius: 360px;
+               background: rgba(245, 235, 205, 0.30);
+               filter: blur(150px);
+            }
+
+            @include tablet {
+               background: rgba(245, 235, 205, 0.40);
+               filter: blur(150px);
+               width: 229px;
+               height: 229px;
+               top: 50%;
+               transform: translateY(-50%);
+            }
+
+            @include mobile {}
+         }
+      }
+
+      .list {
+         display: flex;
+         flex-wrap: wrap;
+
+         @include tablet {
+            display: none;
+         }
+
+         .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            flex: 1 1 50%;
+            padding: 24px 20px;
+            border-top: 1px solid #929191;
+            border-right: 1px solid #929191;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+
+            transition: .3s;
+
+
+
+            .circle {
+               content: '';
+               display: block;
+               width: 420px;
+               height: 420px;
+               border-radius: 50;
+               background: rgba(245, 235, 205, 0.20);
+               filter: blur(150px);
+               position: absolute;
+               // top: -46px;
+               // right: 0px;
+               opacity: 0;
+               visibility: hidden;
+               transform: translate(-50%, -50%);
+               transition-property: opacity, visibility;
+               transition-duration: .5s, .5s;
+               user-select: none;
+               pointer-events: none;
+            }
+
+            @include hover {
+               .circle {
+                  opacity: 1;
+                  visibility: visible;
+               }
+
+               .icon {
+                  transform: rotate(45deg);
+               }
+
+               span {
+                  .icon {
+                     transform: unset;
+                  }
+               }
+            }
+
+            .icon {
+               transition: .3s;
+            }
+
+            @include desktop {
+               padding: 20px;
+            }
+
+            span {
+               display: flex;
+               align-items: center;
+               column-gap: 14px;
+               color: #FFF;
+
+               font-size: clamp(1rem, -1.5rem + 2.5vw, 1.5rem);
+               line-height: clamp(1.25rem, -1.875rem + 3.125vw, 1.875rem);
+               font-style: normal;
+               font-weight: 500;
+
+               @include desktop {
+                  font-size: clamp(0.875rem, 0.25rem + 0.833vw, 1rem);
+                  line-height: clamp(1.125rem, 0.5rem + 0.833vw, 1.25rem);
+               }
+
+               .icon {
+                  display: flex;
+                  width: 20px;
+                  height: 24px;
+
+                  svg {
+                     width: 100%;
+                     height: 100%;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .col-md-6.image {
+      position: relative;
+   }
+
+   &__right {
+      width: 100%;
+      height: calc(100dvh - 71px);
+
+      @include desktop {
+         height: calc(100dvh - 55px);
+      }
+
+      @include tablet {
+         height: 100%;
+         aspect-ratio: 192/221;
+         overflow: hidden;
+         position: relative;
+      }
+
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: center;
+
+         @include tablet {
+            position: unset;
+         }
+      }
+   }
+}
